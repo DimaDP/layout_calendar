@@ -1,3 +1,11 @@
+@import "variables", "mixins", "week__starts--from", "calendar__length";
+
 body {
   margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+}
+
+.calendar {
+  @include calendar__size;
 }

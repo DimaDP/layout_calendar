@@ -1,0 +1,27 @@
+.calendar-mon div:first-child {
+  margin-left: $day__margin*0;
+}
+
+.calendar-tue div:first-child {
+  margin-left: $day__margin*1;
+}
+
+.calendar-wed div:first-child {
+  margin-left: $day__margin*2;
+}
+
+.calendar-thu div:first-child {
+  margin-left: $day__margin*3;
+}
+
+.calendar-fri div:first-child {
+  margin-left: $day__margin*4;
+}
+
+.calendar-sat div:first-child {
+  margin-left: $day__margin*5;
+}
+
+.calendar-sun div:first-child {
+  margin-left: $day__margin*6;
+}

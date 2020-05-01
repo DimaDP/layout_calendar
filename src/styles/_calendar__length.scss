@@ -1,0 +1,76 @@
+.calendar-31 {
+  @for $i from 1 through $month__length--31 {
+    div:nth-child(#{$i})::before {
+      content: "#{$i}";
+      display: block;
+      box-sizing: border-box;
+      width: 100px;
+      height: 100px;
+      background-color: #eee;
+      border: black 1px solid;
+      margin-bottom: 1px;
+      margin-right: 1px;
+    }
+  }
+  div:nth-child(n):hover::before {
+    @include day__box--hover;
+  }
+}
+
+.calendar-30 {
+  @for $i from 1 through $month__length--30 {
+    div:nth-child(#{$i})::before {
+      content: "#{$i}";
+      display: block;
+      box-sizing: border-box;
+      width: 100px;
+      height: 100px;
+      background-color: #eee;
+      border: black 1px solid;
+      margin-bottom: 1px;
+      margin-right: 1px;
+    }
+  }
+  div:nth-child(n):hover::before {
+    @include day__box--hover;
+  }
+}
+
+.calendar-29 {
+  @for $i from 1 through $month__length--29 {
+    div:nth-child(#{$i})::before {
+      content: "#{$i}";
+      display: block;
+      box-sizing: border-box;
+      width: 100px;
+      height: 100px;
+      background-color: #eee;
+      border: black 1px solid;
+      margin-bottom: 1px;
+      margin-right: 1px;
+    }
+  }
+  div:nth-child(n):hover::before {
+    @include day__box--hover;
+  }
+}
+
+.calendar-28 {
+  @for $i from 1 through $month__length--28 {
+    div:nth-child(#{$i})::before {
+      content: "#{$i}";
+      display: block;
+      box-sizing: border-box;
+      width: 100px;
+      height: 100px;
+      background-color: #eee;
+      border: black 1px solid;
+      margin-bottom: 1px;
+      margin-right: 1px;
+    }
+  }
+
+  div:nth-child(n):hover::before {
+    @include day__box--hover;
+  }
+}
