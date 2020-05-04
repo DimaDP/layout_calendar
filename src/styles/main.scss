@@ -1,11 +1,47 @@
-@import "variables", "mixins", "week__starts--from", "calendar__length";
-
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 30px;
+  box-sizing: border-box;
 }
 
 .calendar {
-  @include calendar__size;
+  display: grid;
+  grid-template-columns: repeat(7, 100px);
+  grid-row: 6;
+  grid-gap: 1px;
+  justify-content: center;
+  margin-top: 30px;
+  > div {
+    display: none;
+    line-height: 100px;
+    text-align: center;
+    transition: 0.5s;
+    border: 1px solid #000;
+    background: #eee;
+    &:hover {
+      cursor: pointer;
+      transform: translateY(-20px);
+      background-color: pink;
+    }
+  }
+}
+
+@for $month__length from 28 through 31 {
+  @for $i from 1 through $daysInMonth {
+    .calendar-#{$month__length} div:nth-child(#{$i}) {
+      display: block;
+    }
+    .calendar-#{$month__length} div:nth-child(#{$i}):after {
+      content: "#{$i}";
+    }
+  }
+}
+
+$week: (mon: 1, tue: 2, wed: 3, thu: 4, fri: 5, sat: 6, sun: 7);
+
+@each $week, $num-week in $days {
+  div.calendar-#{$week} div:nth-child(1) {
+    grid-column-start: #{$num-week};
+  }
 }
